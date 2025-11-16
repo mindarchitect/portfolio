@@ -1,0 +1,13 @@
+{
+    "app" : {
+        "components" : {
+            "application" : {
+                "header-text": "Andriy Lavrusha",
+                "menu-items" : {
+                    "home-menu-item": "Home",
+                    "projects-menu-item": "Projects"
+                }
+            }
+        }
+    }
+}
