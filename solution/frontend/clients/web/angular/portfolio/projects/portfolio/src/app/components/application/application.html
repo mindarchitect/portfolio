@@ -13,16 +13,22 @@
 </div>
 <ng-template #headerTemplate>
     <header>
-        <ul class="nav nav-pills flex-row mb-auto">
-            @for(navigationMenuItem of NavigationMenuItems; track $index) {
-                <li class="nav-item">
-                    <button id="navigation-menu-item-{{navigationMenuItem.id" routerLink={{navigationMenuItem.value}}
-                            (click)="onClickNavigationMenuItem($index)" class="nav-link" aria-current="page"
-                            [ngClass]="SelectedNavigationMenuItem.id === navigationMenuItem.id ? 'active' : 'link-body-emphasis'">{{navigationMenuItem.displayValue | translate}}
-                    </button>
-                </li>
-            }
-        </ul>
+        <nav class="navbar navbar-light bg-light justify-content-center">
+            <div class="d-none d-lg-flex justify-content-start w-100 mx-2">
+                <a class="navbar-brand title fw-bolder multicolor-text" href="/home">{{'app.components.application.header-text' | translate}}</a>
+                <ul class="nav nav-pills flex-row mb-auto">
+                    @for(navigationMenuItem of NavigationMenuItems; track $index) {
+                        <li class="nav-item">
+                            <button id="navigation-menu-item-{{navigationMenuItem.id" routerLink={{navigationMenuItem.value}}
+                                    (click)="onClickNavigationMenuItem($index)" class="nav-link" aria-current="page"
+                                    [ngClass]="SelectedNavigationMenuItem.id === navigationMenuItem.id ? 'active' : 'link-body-emphasis'">{{navigationMenuItem.displayValue | translate}}
+                            </button>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+
     </header>
     <hr class="header-divider my-0"/>
 </ng-template>
