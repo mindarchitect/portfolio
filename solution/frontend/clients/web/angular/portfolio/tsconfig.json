@@ -19,16 +19,15 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "typeCheckHostBindings": true,
     "strictTemplates": true
   },
   "files": [],
   "references": [
     {
-      "path": "./projects/portfolio/tsconfig.app.json"
+      "path": "./projects/portal/tsconfig.app.json"
     },
     {
-      "path": "./projects/portfolio/tsconfig.spec.json"
+      "path": "./projects/portal/tsconfig.spec.json"
     }
   ]
 }
