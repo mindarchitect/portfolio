@@ -1,0 +1,12 @@
+{
+    "app" : {
+        "components" : {
+            "application" : {
+                "menu-items" : {
+                    "home-menu-item": "Главная",
+                    "projects-menu-item": "Проекты"
+                }
+            }
+        }
+    }
+}

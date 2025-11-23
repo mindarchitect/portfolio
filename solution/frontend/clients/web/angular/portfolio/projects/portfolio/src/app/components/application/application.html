@@ -1,0 +1,44 @@
+<div>
+    <div class="header sticky-top">
+        <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+    </div>
+    <div class="mb-5" data-value="normal">
+        <!-- New year effect -->
+        <!--<app-snow-effect></app-snow-effect>-->
+        <router-outlet></router-outlet>
+    </div>
+    <div>
+        <ng-container *ngTemplateOutlet="footerTemplate"></ng-container>
+    </div>
+</div>
+<ng-template #headerTemplate>
+    <header>
+        <nav class="navbar navbar-light bg-light justify-content-center">
+            <div class="d-none d-lg-flex justify-content-start w-100 mx-2">
+                <a class="navbar-brand title fw-bolder multicolor-text" href="/home">{{'app.components.application.header-text' | translate}}</a>
+                <ul class="nav nav-pills flex-row mb-auto">
+                    @for(navigationMenuItem of NavigationMenuItems; track $index) {
+                        <li class="nav-item">
+                            <button id="navigation-menu-item-{{navigationMenuItem.id" routerLink={{navigationMenuItem.value}}
+                                    (click)="onClickNavigationMenuItem($index)" class="nav-link" aria-current="page"
+                                    [ngClass]="SelectedNavigationMenuItem.id === navigationMenuItem.id ? 'active' : 'link-body-emphasis'">{{navigationMenuItem.displayValue | translate}}
+                            </button>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <hr class="header-divider my-0"/>
+</ng-template>
+<ng-template #footerTemplate>
+    <footer>
+        <div class="d-none d-md-block fixed-bottom text-muted bg-light">
+            <div class="d-flex justify-content-between align-items-center">
+                <div></div>
+                <div>weareukraine.org.ua&copy; 2022 - {{CurrentYear()}}</div>
+            </div>
+        </div>
+    </footer>
+</ng-template>
