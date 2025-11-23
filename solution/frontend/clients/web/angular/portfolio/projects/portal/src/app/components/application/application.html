@@ -14,8 +14,8 @@
 <ng-template #headerTemplate>
     <header>
         <nav class="navbar navbar-light bg-light justify-content-center">
-            <div class="d-none d-lg-flex justify-content-start w-100 mx-2">
-                <a class="navbar-brand title fw-bolder multicolor-text" href="/home">{{'app.components.application.header-text' | translate}}</a>
+            <div class="d-none d-lg-flex justify-content-between w-100 mx-2">
+                <a class="navbar-brand title fw-bolder multicolor-text" href="/">{{'app.components.application.header-text' | translate}}</a>
                 <ul class="nav nav-pills flex-row mb-auto">
                     @for(navigationMenuItem of NavigationMenuItems; track $index) {
                         <li class="nav-item">
