@@ -30,6 +30,7 @@
               }
             ],
             "styles": [
+              "projects/portal/node_modules/bootstrap/dist/css/bootstrap.min.css",
               "projects/portal/src/styles.scss"
             ],
             "server": "projects/portal/src/main.server.ts",
