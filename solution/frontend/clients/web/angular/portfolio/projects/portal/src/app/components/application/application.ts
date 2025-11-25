@@ -22,7 +22,7 @@ export class Application {
 
     private readonly navigationMenuItems: NavigationMenuItemModel[] = [
         { id: 1, value: 'home', displayValue: 'app.components.application.menu-items.home-menu-item' },
-        { id: 2, value: 'projects', displayValue: 'app.components.application.menu-items.projects-menu-item' }
+        { id: 2, value: 'project-list', displayValue: 'app.components.application.menu-items.projects-menu-item' }
     ];
 
     private selectedNavigationMenuItem: NavigationMenuItemModel = this.navigationMenuItems[0];

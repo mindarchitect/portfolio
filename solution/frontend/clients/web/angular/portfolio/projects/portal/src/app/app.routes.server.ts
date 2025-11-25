@@ -7,10 +7,10 @@ export const serverRoutes: ServerRoute[] = [
     },
     {
         path: 'home',
-        renderMode: RenderMode.Prerender
+        renderMode: RenderMode.Client
     },
     {
-        path: 'projects',
-        renderMode: RenderMode.Prerender
+        path: 'project-list',
+        renderMode: RenderMode.Server
     }
 ];
