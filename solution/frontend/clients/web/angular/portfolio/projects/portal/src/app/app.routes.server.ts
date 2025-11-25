@@ -2,8 +2,8 @@ import {RenderMode, ServerRoute} from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
     {
-        path: '**',
-        renderMode: RenderMode.Prerender
+        path: '', // This renders the "/" route on the client (CSR)
+        renderMode: RenderMode.Client,
     },
     {
         path: 'home',
@@ -12,5 +12,9 @@ export const serverRoutes: ServerRoute[] = [
     {
         path: 'project-list',
         renderMode: RenderMode.Server
+    },
+    {
+        path: '**',
+        renderMode: RenderMode.Prerender
     }
 ];
